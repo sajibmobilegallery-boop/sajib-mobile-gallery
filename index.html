@@ -1,0 +1,1157 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SAJIB MOBILE GALLERY</title>
+
+<meta name="description" content="SAJIB MOBILE GALLERY। নতুন ও পুরাতন মোবাইল ফোন, মোবাইল এক্সেসরিজ, ব্যাক কভার, স্ক্রিন প্রটেক্টর এবং পলি স্টিকার।">
+
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   সাধারণ ডিজাইন
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+    background: #ffffff;
+    color: #10264d;
+    overflow-x: hidden;
+}
+
+/* =========================
+   ব্যাকগ্রাউন্ড অ্যানিমেশন
+========================= */
+
+.background-animation {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.background-animation span {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: rgba(0, 132, 255, 0.07);
+    animation: float 12s infinite ease-in-out;
+}
+
+.background-animation span:nth-child(1) {
+    width: 280px;
+    height: 280px;
+    top: 10%;
+    left: -100px;
+}
+
+.background-animation span:nth-child(2) {
+    width: 350px;
+    height: 350px;
+    right: -150px;
+    top: 45%;
+    animation-delay: 3s;
+}
+
+.background-animation span:nth-child(3) {
+    width: 200px;
+    height: 200px;
+    left: 35%;
+    bottom: -100px;
+    animation-delay: 5s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-35px);
+    }
+}
+
+/* =========================
+   উপরের বার
+========================= */
+
+.topbar {
+    background: #082b75;
+    color: white;
+    text-align: center;
+    padding: 9px 12px;
+    font-size: 13px;
+}
+
+.topbar span {
+    color: #8bd7ff;
+}
+
+/* =========================
+   হেডার
+========================= */
+
+header {
+    background: rgba(255, 255, 255, 0.94);
+    padding: 18px 5%;
+    border-bottom: 1px solid #e7f0ff;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #073b9c;
+    line-height: 1.3;
+}
+
+.logo span {
+    display: block;
+    color: #e31b35;
+    font-size: 15px;
+}
+
+.logo small {
+    display: block;
+    font-size: 10px;
+    color: #526580;
+    font-weight: 500;
+}
+
+.call-button {
+    text-decoration: none;
+    color: white;
+    background: #0755cf;
+    padding: 11px 18px;
+    border-radius: 30px;
+    font-size: 14px;
+    box-shadow: 0 5px 15px #0755cf30;
+}
+
+/* =========================
+   নেভিগেশন
+========================= */
+
+nav {
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 0 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: #17366c;
+    background: white;
+    border: 1px solid #e2edff;
+    padding: 9px 15px;
+    border-radius: 25px;
+    display: inline-block;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: #0755cf;
+    color: white;
+}
+
+/* =========================
+   মূল ব্যানার
+========================= */
+
+.hero {
+    max-width: 1200px;
+    margin: 25px auto;
+    padding: 50px 25px;
+    border-radius: 25px;
+    background: linear-gradient(
+        135deg,
+        #ffffff,
+        #edf7ff,
+        #ffffff
+    );
+    border: 1px solid #e1efff;
+    box-shadow: 0 15px 45px rgba(0, 80, 200, 0.08);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: #c9e8ff;
+    opacity: 0.3;
+    border-radius: 50%;
+    top: -150px;
+    right: -100px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-label {
+    display: inline-block;
+    background: #e8f3ff;
+    color: #0755cf;
+    border-radius: 30px;
+    padding: 6px 18px;
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(28px, 6vw, 48px);
+    line-height: 1.4;
+    color: #073b9c;
+    margin-bottom: 10px;
+}
+
+.hero h1 span {
+    color: #e31b35;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 15px auto;
+    color: #526580;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.primary-button,
+.secondary-button {
+    text-decoration: none;
+    padding: 13px 25px;
+    border-radius: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-button {
+    background: #0755cf;
+    color: white;
+    box-shadow: 0 5px 20px #0755cf35;
+}
+
+.secondary-button {
+    background: white;
+    color: #0755cf;
+    border: 1px solid #cfe3ff;
+}
+
+.primary-button:hover,
+.secondary-button:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   বিশ্বাসের বার্তা
+========================= */
+
+.trust-section {
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.trust-item {
+    text-align: center;
+    padding: 18px 10px;
+    border-radius: 15px;
+    background: #ffffff;
+    border: 1px solid #e6f0ff;
+}
+
+.trust-item .icon {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.trust-item h3 {
+    font-size: 15px;
+    color: #073b9c;
+}
+
+.trust-item p {
+    font-size: 12px;
+    color: #6c7d96;
+    margin-top: 5px;
+}
+
+/* =========================
+   সার্ভিস সেকশন
+========================= */
+
+.services {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.section-heading span {
+    color: #0755cf;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-size: 30px;
+    color: #073b9c;
+    margin: 8px 0;
+}
+
+.section-heading p {
+    color: #6c7d96;
+    font-size: 14px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+/* =========================
+   সার্ভিস কার্ড
+========================= */
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #dcecff;
+    border-radius: 20px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 100, 220, 0.12);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    background: #edf6ff;
+    border-radius: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin-bottom: 18px;
+}
+
+.service-card h3 {
+    color: #073b9c;
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    color: #687c98;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   নীল আলো ঘোরা বাটন
+========================= */
+
+.service-button {
+    position: relative;
+    display: inline-flex;
+    text-decoration: none;
+    padding: 2px;
+    border-radius: 30px;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.service-button::before {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 250%;
+    background: conic-gradient(
+        transparent,
+        transparent,
+        #00aaff,
+        #ffffff,
+        #008cff,
+        transparent
+    );
+    top: -75%;
+    left: -75%;
+    animation: rotateLight 4s linear infinite;
+    z-index: -1;
+}
+
+.service-button span {
+    display: block;
+    background: white;
+    color: #0755cf;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+@keyframes rotateLight {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================
+   দোকানের পরিচিতি
+========================= */
+
+.about {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 35px 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #f0f8ff, #ffffff);
+    border: 1px solid #e1efff;
+    text-align: center;
+}
+
+.about h2 {
+    color: #073b9c;
+    font-size: 27px;
+    margin-bottom: 15px;
+}
+
+.about p {
+    color: #526580;
+    font-size: 14px;
+    line-height: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+/* =========================
+   যোগাযোগ
+========================= */
+
+.contact {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+.contact-box {
+    background: white;
+    border: 1px solid #dcecff;
+    border-radius: 22px;
+    padding: 30px;
+    box-shadow: 0 10px 35px #0755cf0c;
+}
+
+.contact-box h2 {
+    color: #073b9c;
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #edf3fa;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item .icon {
+    font-size: 23px;
+}
+
+.contact-item h3 {
+    font-size: 15px;
+    color: #073b9c;
+}
+
+.contact-item p {
+    color: #64758d;
+    font-size: 13px;
+    line-height: 1.9;
+    margin-top: 5px;
+}
+
+.contact-item a {
+    color: #0755cf;
+    text-decoration: none;
+}
+
+/* =========================
+   WhatsApp বাটন
+========================= */
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 18px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: white;
+    background: #16a34a;
+    padding: 13px 20px;
+    border-radius: 40px;
+    box-shadow: 0 5px 25px #16a34a45;
+    font-size: 13px;
+    font-weight: 600;
+    animation: whatsappPulse 3s infinite;
+}
+
+@keyframes whatsappPulse {
+    0%, 100% {
+        box-shadow: 0 5px 20px #16a34a30;
+    }
+
+    50% {
+        box-shadow: 0 5px 30px #16a34a80;
+    }
+}
+
+/* =========================
+   ফুটার
+========================= */
+
+footer {
+    background: #082b75;
+    color: white;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 12px;
+    color: #d5e5ff;
+    line-height: 2;
+}
+
+footer .copyright {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #ffffff25;
+    font-size: 11px;
+}
+
+/* =========================
+   মোবাইল ডিজাইন
+========================= */
+
+@media (max-width: 650px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav ul {
+        gap: 6px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+
+    .hero {
+        margin: 15px;
+        padding: 35px 18px;
+        border-radius: 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .trust-section {
+        grid-template-columns: 1fr;
+        margin: 20px 15px;
+        gap: 10px;
+    }
+
+    .trust-item {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .trust-item .icon {
+        margin: 0;
+    }
+
+    .services {
+        margin: 35px auto;
+        padding: 15px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .service-card {
+        padding: 22px;
+    }
+
+    .about {
+        margin: 35px 15px;
+        padding: 25px 18px;
+    }
+
+    .about h2 {
+        font-size: 23px;
+    }
+
+    .contact {
+        margin: 35px auto;
+        padding: 15px;
+    }
+
+    .contact-box {
+        padding: 22px 18px;
+    }
+
+    .contact-box h2 {
+        font-size: 24px;
+    }
+
+    .whatsapp-button {
+        bottom: 15px;
+        right: 12px;
+        padding: 12px 17px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ব্যাকগ্রাউন্ড -->
+
+<div class="background-animation">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- উপরের বার -->
+
+<div class="topbar">
+    ✦ <span>আপনার বিশ্বস্ত মোবাইল শপ</span>
+    &nbsp; | &nbsp;
+    মানসম্মত পণ্য
+    &nbsp; | &nbsp;
+    গ্রাহক সেবাই আমাদের লক্ষ্য
+</div>
+
+<!-- হেডার -->
+
+<header>
+
+    <div class="header-content">
+
+        <div class="logo">
+            SAJIB
+            <span>MOBILE GALLERY</span>
+            <small>স্মার্ট কেনাকাটা, সুন্দর জীবন</small>
+        </div>
+
+        <a class="call-button"
+           href="tel:+8801822588288">
+
+            ☎ এখনই যোগাযোগ করুন
+
+        </a>
+
+    </div>
+
+</header>
+
+<!-- নেভিগেশন -->
+
+<nav>
+
+    <ul>
+
+        <li><a href="#home">হোম</a></li>
+
+        <li><a href="#services">আমাদের সেবা</a></li>
+
+        <li><a href="#about">আমাদের সম্পর্কে</a></li>
+
+        <li><a href="#contact">যোগাযোগ</a></li>
+
+    </ul>
+
+</nav>
+
+<!-- প্রধান ব্যানার -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-label">
+            স্বাগতম আমাদের মোবাইল গ্যালারিতে
+        </span>
+
+        <h1>
+            SAJIB <span>MOBILE GALLERY</span>
+        </h1>
+
+        <p>
+            আপনার পছন্দের মোবাইল ও মোবাইল এক্সেসরিজের
+            বিশ্বস্ত ঠিকানা। নতুন মোবাইল, পুরাতন মোবাইল,
+            সুন্দর ব্যাক কভার এবং প্রয়োজনীয় সব মোবাইল
+            সামগ্রী নিয়ে আমরা আছি আপনার পাশে।
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="primary-button">
+                আমাদের সেবাসমূহ দেখুন
+            </a>
+
+            <a href="#contact" class="secondary-button">
+                যোগাযোগ করুন
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- বিশ্বাসের বার্তা -->
+
+<section class="trust-section">
+
+    <div class="trust-item">
+
+        <div class="icon">🛡️</div>
+
+        <div>
+            <h3>বিশ্বস্ত দোকান</h3>
+
+            <p>
+                আপনার সন্তুষ্টি আমাদের কাছে গুরুত্বপূর্ণ
+            </p>
+        </div>
+
+    </div>
+
+    <div class="trust-item">
+
+        <div class="icon">📱</div>
+
+        <div>
+            <h3>বিভিন্ন ধরনের মোবাইল</h3>
+
+            <p>
+                আপনার প্রয়োজন অনুযায়ী পণ্য
+            </p>
+        </div>
+
+    </div>
+
+    <div class="trust-item">
+
+        <div class="icon">💙</div>
+
+        <div>
+            <h3>গ্রাহক সেবা</h3>
+
+            <p>
+                আন্তরিকতা ও যত্নের সঙ্গে সেবা
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- সার্ভিস সেকশন -->
+
+<section class="services" id="services">
+
+    <div class="section-heading">
+
+        <span>আমাদের সেবাসমূহ</span>
+
+        <h2>আপনার প্রয়োজন, আমাদের সেবা</h2>
+
+        <p>
+            আপনার পছন্দের পণ্য বেছে নিন
+        </p>
+
+    </div>
+
+    <div class="services-grid">
+
+        <!-- নতুন মোবাইল -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                📱
+            </div>
+
+            <h3>নতুন মোবাইল ফোন</h3>
+
+            <p>
+                নতুন মোবাইল ফোনের বিভিন্ন মডেল।
+                আপনার পছন্দ ও প্রয়োজন অনুযায়ী
+                মোবাইল সম্পর্কে জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+            </p>
+
+            <a class="service-button"
+               href="https://wa.me/8801822588288?text=আমি%20নতুন%20মোবাইল%20ফোন%20সম্পর্কে%20জানতে%20চাই">
+
+                <span>বিস্তারিত জানতে যোগাযোগ করুন</span>
+
+            </a>
+
+        </div>
+
+        <!-- পুরাতন মোবাইল -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🔄
+            </div>
+
+            <h3>পুরাতন মোবাইল ফোন</h3>
+
+            <p>
+                পুরাতন মোবাইল ফোন কেনাবেচা
+                এবং মোবাইল সম্পর্কে বিস্তারিত
+                জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+            </p>
+
+            <a class="service-button"
+               href="https://wa.me/8801822588288?text=আমি%20পুরাতন%20মোবাইল%20ফোন%20সম্পর্কে%20জানতে%20চাই">
+
+                <span>বিস্তারিত জানতে যোগাযোগ করুন</span>
+
+            </a>
+
+        </div>
+
+        <!-- মোবাইল এক্সেসরিজ -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🎧
+            </div>
+
+            <h3>মোবাইল এক্সেসরিজ</h3>
+
+            <p>
+                মোবাইল চার্জার, কেবল, ইয়ারফোন,
+                ব্যাক কভার এবং প্রয়োজনীয়
+                মোবাইল এক্সেসরিজ সম্পর্কে জানতে যোগাযোগ করুন।
+            </p>
+
+            <a class="service-button"
+               href="https://wa.me/8801822588288?text=আমি%20মোবাইল%20এক্সেসরিজ%20সম্পর্কে%20জানতে%20চাই">
+
+                <span>এক্সেসরিজ সম্পর্কে জানুন</span>
+
+            </a>
+
+        </div>
+
+        <!-- পলি স্টিকার -->
+
+        <div class="service-card">
+
+            <div class="service-icon">
+                🛡️
+            </div>
+
+            <h3>পলি স্টিকার ও স্ক্রিন প্রটেক্টর</h3>
+
+            <p>
+                মোবাইলের পলি স্টিকার,
+                ব্যাক কভার স্কিন এবং
+                স্ক্রিন প্রটেক্টর সম্পর্কে জানতে যোগাযোগ করুন।
+            </p>
+
+            <a class="service-button"
+               href="https://wa.me/8801822588288?text=আমি%20মোবাইলের%20পলি%20স্টিকার%20ও%20স্ক্রিন%20প্রটেক্টর%20সম্পর্কে%20জানতে%20চাই">
+
+                <span>বিস্তারিত জানতে যোগাযোগ করুন</span>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- আমাদের সম্পর্কে -->
+
+<section class="about" id="about">
+
+    <h2>আপনার আস্থাই আমাদের শক্তি</h2>
+
+    <p>
+        SAJIB MOBILE GALLERY-তে আপনাকে স্বাগতম।
+        আমরা মোবাইল ফোন এবং মোবাইল এক্সেসরিজ
+        সম্পর্কিত বিভিন্ন সেবা দিয়ে থাকি।
+
+        <br><br>
+
+        আমাদের লক্ষ্য হলো গ্রাহকদের প্রয়োজন বুঝে
+        আন্তরিকভাবে সহযোগিতা করা এবং
+        কেনাকাটার ক্ষেত্রে সঠিক তথ্য প্রদান করা।
+
+        <br><br>
+
+        আপনার পছন্দের মোবাইল বা এক্সেসরিজ সম্পর্কে
+        জানতে আমাদের সঙ্গে যোগাযোগ করুন।
+        আপনার সন্তুষ্টিই আমাদের সবচেয়ে বড় অর্জন।
+    </p>
+
+</section>
+
+<!-- যোগাযোগ -->
+
+<section class="contact" id="contact">
+
+    <div class="section-heading">
+
+        <span>আমাদের সঙ্গে যোগাযোগ</span>
+
+        <h2>আপনার পাশে SAJIB MOBILE GALLERY</h2>
+
+        <p>
+            যেকোনো তথ্যের জন্য আমাদের সঙ্গে যোগাযোগ করুন
+        </p>
+
+    </div>
+
+    <div class="contact-box">
+
+        <h2>যোগাযোগের তথ্য</h2>
+
+        <!-- ফোন -->
+
+        <div class="contact-item">
+
+            <div class="icon">☎️</div>
+
+            <div>
+
+                <h3>মোবাইল নাম্বার</h3>
+
+                <p>
+                    <a href="tel:+8801822588288">
+                        +8801822588288
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- WhatsApp -->
+
+        <div class="contact-item">
+
+            <div class="icon">💬</div>
+
+            <div>
+
+                <h3>হোয়াটসঅ্যাপ</h3>
+
+                <p>
+                    <a href="https://wa.me/8801822588288">
+                        হোয়াটসঅ্যাপে যোগাযোগ করুন
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ঠিকানা -->
+
+        <div class="contact-item">
+
+            <div class="icon">📍</div>
+
+            <div>
+
+                <h3>দোকানের ঠিকানা</h3>
+
+                <p>
+                    থানা রোড, নিউ মার্কেট,
+                    দোকান নং-৭০১,
+                    ধোবাউড়া, ময়মনসিংহ।
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ফুটার -->
+
+<footer>
+
+    <h3>SAJIB MOBILE GALLERY</h3>
+
+    <p>
+        আপনার বিশ্বস্ত মোবাইল শপ
+        <br>
+        স্মার্ট কেনাকাটা, সুন্দর জীবন
+    </p>
+
+    <p>
+        ফোন: +8801822588288
+    </p>
+
+    <div class="copyright">
+
+        © <span id="year"></span>
+        SAJIB MOBILE GALLERY
+
+        <br>
+
+        সর্বস্বত্ব সংরক্ষিত
+
+    </div>
+
+</footer>
+
+<!-- WhatsApp বাটন -->
+
+<a class="whatsapp-button"
+   href="https://wa.me/8801822588288?text=আসসালামু%20আলাইকুম%2C%20আমি%20আপনার%20দোকানের%20পণ্য%20সম্পর্কে%20জানতে%20চাই।"
+   target="_blank"
+   rel="noopener">
+
+    💬 হোয়াটসঅ্যাপে যোগাযোগ
+
+</a>
+
+<!-- JavaScript -->
+
+<script>
+
+// বর্তমান বছর
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+// সার্ভিস বাটনে ক্লিক করলে
+// সংশ্লিষ্ট WhatsApp যোগাযোগ চালু হবে।
+
+</script>
+
+</body>
+</html>
